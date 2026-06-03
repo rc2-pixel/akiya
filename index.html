@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
 
+  <title>空き家売却・相続不動産の無料相談AI｜査定前の安心サポート</title>
+
+  <meta name="description" content="空き家の売却・相続・管理でお困りの方へ。無料相談AIが状況を整理し、最適な解決方法と不動産売却の第一歩をサポートします。">
+
+  <meta name="keywords" content="空き家,空き家売却,不動産査定,相続不動産,空き家相談,家の処分,不動産売却">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO補助 -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://RC2Pixel.github.io/Akia/">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f5f6f8;
+      color: #333;
+    }
+
+    header {
+      background: #1f3a56;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+
+    #chat {
+      background: white;
+      padding: 15px;
+      height: 55vh;
+      overflow-y: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .msg {
+      margin: 10px 0;
+    }
+
+    .user {
+      text-align: right;
+      color: #1a73e8;
+    }
+
+    .ai {
+      text-align: left;
+      color: #2e7d32;
+    }
+
+    #inputArea {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    input {
+      flex: 1;
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 15px;
+      background: #1f3a56;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #cta {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff3cd;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>空き家売却・相続不動産の無料相談AI</h1>
+</header>
+
+<div class="container">
+
+  <p>
+    空き家の売却・相続・管理でお困りの方へ。まずはAIが状況を整理し、
+    あなたに合った解決の方向性をご案内します。
+  </p>
+
+  <div id="chat"></div>
+
+  <div id="inputArea">
+    <input id="text" placeholder="例：空き家を売りたい・相続した家がある">
+    <button onclick="send()">送信</button>
+  </div>
+
+  <div id="cta">
+    <strong>無料相談受付中</strong><br>
+    詳しい査定・売却相談は不動産専門スタッフが対応します。<br><br>
+    <button onclick="alert('問い合わせリンクをここに設定')">無料査定に進む</button>
+  </div>
+
+</div>
+
+<footer>
+  © 空き家相談AI
+</footer>
+
+<script>
+function send() {
+  const input = document.getElementById("text");
+  const chat = document.getElementById("chat");
+
+  const text = input.value;
+  if (!text) return;
+
+  chat.innerHTML += `<div class="msg user">あなた：${text}</div>`;
+
+  let reply = "まずは空き家の場所・築年数・相続状況を教えてください。";
+
+  if (text.includes("売りたい")) {
+    reply = "売却の可能性があります。まず所在地と建物の状態を教えてください。";
+  }
+
+  if (text.includes("相続")) {
+    reply = "相続物件の場合、名義や登記の確認が重要です。状況を教えてください。";
+  }
+
+  chat.innerHTML += `<div class="msg ai">相談AI：${reply}</div>`;
+
+  input.value = "";
+  chat.scrollTop = chat.scrollHeight;
+}
+</script>
+
+</body>
+</html>
